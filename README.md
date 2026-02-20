@@ -19,12 +19,11 @@ Technologies Used:
 
 Screenshots:
 
-<img src="screenshots/home_light.png" width="250"/>
 <img src="screenshots/home_dark.png" width="250"/>
+<img src="screenshots/home_light.png" width="250"/>
+
 <img src="screenshots/drawer_settings.png" width="250"/>
-
 <img src="screenshots/general_news.png" width="250"/>
-<img src="screenshots/business_news.png" width="250"/>
 
+<img src="screenshots/business_news.png" width="250"/>
 <img src="screenshots/sports_news.png" width="250"/>
-<img src="screenshots/technology_news.png" width="250"/>
