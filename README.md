@@ -19,11 +19,11 @@ Technologies Used:
 
 Screenshots:
 
-![Home Dark](./screenshots/home_dark.png)
-![Home Light](./screenshots/home_light.png)
+<img src="screenshots/home_dark.png" width="250"/>
+<img src="screenshots/home_light.png" width="250"/>
 
-![Drawer Settings](./screenshots/drawer_settings.png)
-![General News](./screenshots/general_news.png)
+<img src="screenshots/drawer_settings.png" width="250"/>
+<img src="screenshots/general_news.png" width="250"/>
 
-![Business News](./screenshots/business_news.png)
-![Sports News](./screenshots/sports_news.png)
+<img src="screenshots/business_news.png" width="250"/>
+<img src="screenshots/sports_news.png" width="250"/>
