@@ -1,16 +1,30 @@
-# news_app
+News Application
 
-A new Flutter project.
+A modern Flutter news application that fetches real-time news from multiple sources using a public REST API.  
+The app supports multiple categories, themes, and languages with a clean and responsive UI.
 
-## Getting Started
+Features:
+- Fetch real-time news using NewsAPI.org
+- Multiple news categories (General, Business, Sports, Technology, Science, Health)
+- Browse news by source
+- Light & Dark theme support
+- Language selection
+- Clean and responsive UI
+- Error handling for network requests
 
-This project is a starting point for a Flutter application.
+Technologies Used:
+- Flutter
+- Dart
+- REST APIs (NewsAPI.org)
 
-A few resources to get you started if this is your first Flutter project:
+Screenshots:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="screenshots/home_light.png" width="250"/>
+<img src="screenshots/home_dark.png" width="250"/>
+<img src="screenshots/drawer_settings.png" width="250"/>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="screenshots/general_news.png" width="250"/>
+<img src="screenshots/business_news.png" width="250"/>
+
+<img src="screenshots/sports_news.png" width="250"/>
+<img src="screenshots/technology_news.png" width="250"/>
