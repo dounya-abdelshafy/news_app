@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/ui/home/home_screen.dart';
+import 'package:news_app/ui/splash_screen/splash_screen.dart';
 import 'package:news_app/utils/app_routes.dart';
 import 'package:news_app/utils/app_theme.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.homeRouteName,
       routes: {
-        AppRoutes.homeRouteName : (context) => HomeScreen(),
+        AppRoutes.homeRouteName: (context) => HomeScreen(),
+        AppRoutes.splashScreenRouteName: (context) => SplashScreen(),
       },
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
