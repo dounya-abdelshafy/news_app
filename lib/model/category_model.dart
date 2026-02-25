@@ -15,7 +15,6 @@ class CategoryModel {
         image: isDark
             ? AssetsManager.generalLightImage
             : AssetsManager.generalDarkImage,
-
       ),
       CategoryModel(
         id: 'business',
@@ -23,7 +22,6 @@ class CategoryModel {
         image: isDark
             ? AssetsManager.businessLightImage
             : AssetsManager.businessDarkImage,
-
       ),
       CategoryModel(
         id: 'sports',
@@ -31,7 +29,6 @@ class CategoryModel {
         image: isDark
             ? AssetsManager.sportLightImage
             : AssetsManager.sportDarkImage,
-
       ),
       CategoryModel(
         id: 'technology',
@@ -39,7 +36,6 @@ class CategoryModel {
         image: isDark
             ? AssetsManager.technologyLightImage
             : AssetsManager.technologyDarkImage,
-
       ),
       CategoryModel(
         id: 'science',
@@ -47,7 +43,6 @@ class CategoryModel {
         image: isDark
             ? AssetsManager.scienceLightImage
             : AssetsManager.scienceDarkImage,
-
       ),
       CategoryModel(
         id: 'health',
@@ -55,7 +50,6 @@ class CategoryModel {
         image: isDark
             ? AssetsManager.healthLightImage
             : AssetsManager.healthDarkImage,
-
       ),
       CategoryModel(
         id: 'entertainment',
@@ -63,9 +57,7 @@ class CategoryModel {
         image: isDark
             ? AssetsManager.entertainmentLightImage
             : AssetsManager.entertainmentDarkImage,
-
       ),
     ];
   }
 }
-

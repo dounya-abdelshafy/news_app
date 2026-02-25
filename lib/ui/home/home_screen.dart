@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/model/category_model.dart';
-import 'package:news_app/ui/home/category_details/category_details.dart';
+import 'package:news_app/ui/home/category_details/sources/sources_details.dart';
 import 'package:news_app/ui/home/category_fragment/category_fragment.dart';
 import 'package:news_app/ui/home/drawer/home_drawer.dart';
 import 'package:news_app/utils/assets_manager.dart';
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: Drawer(child: HomeDrawer(onDrawerClick: onDrawerClick)),
       body: selectedCategory == null
           ? CategoryFragment(onCategoryItemClick: onCategoryItemClick)
-          : CategoryDetails(categoryModel: selectedCategory!),
+          : SourcesDetails(categoryModel: selectedCategory!),
     );
   }
 

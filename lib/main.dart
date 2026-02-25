@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/ui/home/home_screen.dart';
 import 'package:news_app/ui/splash_screen/splash_screen.dart';
 import 'package:news_app/utils/app_routes.dart';
 import 'package:news_app/utils/app_theme.dart';
+import 'package:news_app/utils/my_bloc_observer.dart';
 
 void main() {
+  Bloc.observer = MyBlocObserver();
   runApp(MyApp());
 }
 
