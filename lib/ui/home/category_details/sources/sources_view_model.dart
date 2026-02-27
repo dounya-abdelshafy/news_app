@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../api/api_manager.dart';
-import '../../../model/source_response.dart';
+import '../../../../api/api_manager.dart';
+import '../../../../model/source_response.dart';
 
 class SourcesViewModel extends ChangeNotifier {
   //todo: hold data - handle logic
