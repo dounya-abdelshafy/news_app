@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/di/di.dart';
 import 'package:news_app/model/category_model.dart';
 import 'package:news_app/ui/home/category_details/sources/source_tab_widget.dart';
 import 'package:news_app/ui/home/category_details/sources/sources_cubit/sources_state.dart';
@@ -19,7 +20,7 @@ class SourcesDetails extends StatefulWidget {
 
 
 class _SourcesDetailsState extends State<SourcesDetails> {
-  SourcesViewModel viewModel = SourcesViewModel();
+  SourcesViewModel viewModel = SourcesViewModel(sourceRepository: injectSourceRepository());
 
   @override
   void initState() {
@@ -60,8 +61,7 @@ class _SourcesDetailsState extends State<SourcesDetails> {
                   SizedBox(height: height * 0.02),
                   ElevatedButton(
                     onPressed: () {
-                      ApiManager.getNewsSources(widget.categoryModel.id);
-
+                      // ApiManager.getNewsSources(widget.categoryModel.id);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.greyColor,
