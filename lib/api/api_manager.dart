@@ -6,10 +6,26 @@ import 'package:news_app/model/news_response.dart';
 import 'package:news_app/model/source_response.dart';
 
 class ApiManager {
-   Future<SourceResponse?> getNewsSources(String categoryId) async {
+  //todo: Singleton pattern
+  static ApiManager?
+  _instance; //todo: ? bc at first in will be null 'there is no obj from ApiManager'
+
+  //todo: private constructor => to prevent any class create obj from ApiManager
+  ApiManager._();
+
+  static ApiManager getInstance() {
+    // if(instance == null) {
+    //   //todo: create obj
+    //   instance = ApiManager();
+    // }
+    _instance ??= ApiManager._(); //todo: => equal to if
+    return _instance!;
+  }
+
+  Future<SourceResponse?> getNewsSources(String categoryId) async {
     Uri url = Uri.https(ApiConstants.serverName, EndPoints.sourceApi, {
       'apiKey': ApiConstants.apiKey,
-      'category' : categoryId,
+      'category': categoryId,
     });
     try {
       var response = await http.get(url);
@@ -35,7 +51,7 @@ class ApiManager {
     // //todo: we will put it into try , catch
   }
 
-   Future<NewsResponse?> getNewsBySourceId(String sourceId) async {
+  Future<NewsResponse?> getNewsBySourceId(String sourceId) async {
     Uri url = Uri.https(ApiConstants.serverName, EndPoints.newsApi, {
       'apiKey': ApiConstants.apiKey,
       'sources': sourceId,

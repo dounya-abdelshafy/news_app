@@ -8,21 +8,26 @@ import 'package:news_app/data/repository/news/data_sources/remote/impl/news_remo
 import 'package:news_app/data/repository/news/data_sources/remote/news_remote_data_source.dart';
 import 'package:news_app/data/repository/news/repository/impl/news_repository_impl.dart';
 import 'package:news_app/data/repository/news/repository/news_repository.dart';
+import 'package:news_app/data/repository/sources/data_sources/local/impl/source_local_data_source_impl.dart';
+import 'package:news_app/data/repository/sources/data_sources/local/source_local_data_source.dart';
 import 'package:news_app/data/repository/sources/data_sources/remote/impl/source_remote_data_source_impl.dart';
 import 'package:news_app/data/repository/sources/data_sources/remote/source_remote_data_source.dart';
 import 'package:news_app/data/repository/sources/repository/impl/source_repository_impl.dart';
 import 'package:news_app/data/repository/sources/repository/source_repository.dart';
 
 SourceRepository injectSourceRepository() {
-  return SourceRepositoryImpl(remoteDataSource: injectSourceRemoteDataSource());
+  return SourceRepositoryImpl(
+    remoteDataSource: injectSourceRemoteDataSource(),
+    localDataSource: injectSourceLocalDataSource(),
+  );
+}
+
+SourceLocalDataSource injectSourceLocalDataSource() {
+  return SourceLocalDataSourceImpl();
 }
 
 SourceRemoteDataSource injectSourceRemoteDataSource() {
-  return SourceRemoteDataSourceImpl(apiManager: injectApiManager());
-}
-
-ApiManager injectApiManager() {
-  return ApiManager();
+  return SourceRemoteDataSourceImpl(apiManager: ApiManager.getInstance());
 }
 
 //--------------------------------------------------------------------//
@@ -37,5 +42,5 @@ NewsRepository injectNewsRepository() {
 }
 
 NewsRemoteDataSource injectNewsRemoteDataSource() {
-  return NewsRemoteDataSourceImpl(apiManager: injectApiManager());
+  return NewsRemoteDataSourceImpl(apiManager: ApiManager.getInstance());
 }

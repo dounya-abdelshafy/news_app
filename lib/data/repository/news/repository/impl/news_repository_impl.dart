@@ -10,12 +10,6 @@ class NewsRepositoryImpl implements NewsRepository {
 
   @override
   Future<NewsResponse?> getNewsBySourceId(String sourceId) {
-    // TODO: implement getNewsBySourceId
-    throw UnimplementedError();
+    return remoteDataSource.getNewsBySourceId(sourceId);
   }
-
-  // @override
-  // Future<NewsResponse?> getNewsBySourceId(String sourceId) {
-  //   return remoteDataSource.getNewsBySourceId(sourceId);
-  // }
 }
